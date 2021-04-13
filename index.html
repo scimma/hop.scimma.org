@@ -152,14 +152,14 @@
 <i># install the client</i>
 <b>$ pip install hop-client</b>
 
-<i># authenticate by following the instructions which this command will print</i>
-<b>$ hop auth</b>
+<i># log into my.hop.scimma.org, generate a token, and add it to your configuration
+<b>$ hop auth add</b>
 
 <i># receive messages from the test stream (approximately one per second)</i>
-<b>$ hop-client subscribe scimma.heartbeat</b>
+<b>$ hop subscribe --persist kafka://kafka.scimma.org/sys.heartbeat</b>
 
 <i># receive messages from GCN</i>
-<b>$ hop-client subscribe gcn.circulars</b>
+<b>$ hop subscribe --persist kafka://kafka.scimma.org/gcn.circular</b>
               </pre>
               </p>
             </div>
