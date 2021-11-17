@@ -162,14 +162,14 @@
 <i># enter the credentials into the hop authentication prompts:</i>
 <b>$ hop auth add</b>
 
-<i># receive messages from the test stream (approximately one per second)</i>
-<b>$ hop subscribe -e kafka://kafka.scimma.org/sys.heartbeat</b>
+<i># receive test messages from the heartbeat stream (approximately one per second)</i>
+<b>$ hop subscribe kafka://kafka.scimma.org/sys.heartbeat</b>
 
 <i># receive new messages from GCN (will take several minutes for a new message to arrive)</i>
 <b>$ hop subscribe kafka://kafka.scimma.org/gcn.circular</b>
 
 <i># read all stored messages from GCN </i>
-<b>$ hop subscribe -s EARLIEST kafka://kafka.scimma.org/gcn.circular</b>
+<b>$ hop subscribe -e -s EARLIEST kafka://kafka.scimma.org/gcn.circular</b>
               </pre>
               An in-depth setup tutorial is available on the <a href="https://github.com/scimma/hop-client/wiki/Tutorial:-using-hop-client-with-the-SCiMMA-Hopskotch-server">hop-client GitHub wiki</a>.
               </p>
